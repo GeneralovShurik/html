@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            color: black;
+            padding: 6px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background:rgb(45, 151, 54)"; font - size: 20px;>
+    <form>
+        <input required maxlength="12"/> <!-- required выводит надпись - заполните это поле, maxlength-макс кол во символов в поле-->
+        <input value ="Send" type = "submit" /> <!-- value-надпись на кнопке, type = "submit"-окно ввода -->
+        <input max="20" min="0" step="2" type="number"/>
+    </form>
+
+    <form 
+    action="https://www.21vek.by/mobile"
+    method="post">  
+         <!--добавим: выподающий список -Цвет
+                      чек боксы -Производители
+                      radio-buttom - Оперативная память
+                      input(текст или числа) - Цена, б.р.-->
+
+                      <input placeholder="цена от"
+                      type="number"
+                      min="0"
+                      max="2500"
+                      value="100"
+                      name="filter[price][from]"
+                      />
+                      <input placeholder="цена до"
+                      type="number"
+                      min="0"
+                      max="2500"
+                      value="2500"
+                      name="filter[price][to]"
+                      />
+                      <br />
+
+                      <input 
+                      name="filter[producer][]"
+                      value="apple"
+                      type="checkbox"/>
+                      <span>Apple</span>
+
+                      <br />
+
+                      <input 
+                      name="filter[producer][]"
+                      value="honor"
+                      type="checkbox"/>
+                      <span>Honor</span>
+
+                      <br />
+                      <br />
+
+                      <select name="filter[2499][]">
+                        <option selected disabled></option>
+                        <option value="5837">Белый</option>
+                        <option value="5836">Черный</option>
+                        <option value="5840">Золотистый</option>
+                      </select>
+
+                      <br />
+                      <br />
+
+                      <div>RAM</div>
+
+                      <input
+                      name="filter[50253][]"
+                      value="322493"
+                      type="radio"/>
+                      <span>2гб</span>
+                      <br />
+
+                      <input 
+                      name="filter[50253][]"
+                      value="322513"
+                      type="radio"/>
+                      <span>4гб</span>
+                      <br />
+
+                      <input 
+                      name="filter[50253][]"
+                      value="324154"
+                      type="radio"/>
+                      <span>6гб</span>
+                      <br />
+                      <br />
+
+                      <input type="submit" value="Найти"/>
+
+    </form>
+    
+</body>
+</html>
