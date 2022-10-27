@@ -1,0 +1,153 @@
+#absolute {
+    height: 100px; /* по умолчанию 0px*/
+    width: 100px; /* по умолчанию 0px*/
+    background: rgb(10, 177, 74);/* по умолчанию прозрачный*/
+    position: absolute;
+    /*top, botton, left, right (сверху снизу слева справа)*/
+    top: 150px;
+    left: 100px;
+    right: 100px;
+    bottom: 50px;
+    z-index: 20;/* по умолчанию 0*/
+
+}
+
+#absolute2 {
+    height: 100px; /* по умолчанию 0px*/
+    width: 100px; /* по умолчанию 0px*/
+    background: rgb(158, 125, 125);
+   
+    position: absolute;
+
+    top: 300px;
+    left: 180px;
+    z-index: 21;
+}
+/*полоса прокрутки*/
+body {
+    height: 2000px;
+}
+#block {
+    top: 50px;
+    height: 160px; /* по умолчанию 0px*/
+    width: 160px; /* по умолчанию 0px*/
+    border: 3px dotted gray;
+    position: relative;
+}
+#absolute3 {
+    height: 20px; /* по умолчанию 0px*/
+    width: 20px; /* по умолчанию 0px*/
+    background: rgb(35, 143, 185);
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    border-radius: 50%;
+    animation-name: test;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    z-index: 30;
+}
+
+#fixed {
+    height: 60px; /* по умолчанию 0px*/
+    
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    background: rgb(209, 209, 108);
+    z-index: 22;
+    position: fixed;
+}
+#sticky {
+    height: 10px; /* по умолчанию 0px*/
+    top: 300px;
+    left: 40px;
+    right: 40px;
+
+    background: rgb(207, 123, 207);
+    z-index: 23;
+    position: sticky;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-direction: column;
+    flex-direction: row;
+    flex-direction: row-reverse;
+}
+ #sticky1>div {
+    background: rgb(194, 9, 9);
+    width: 200px;
+    height: 200px;
+    z-index: 25;
+
+
+    /* цвета в css:
+  1. название на английском языке*/
+  background: brown;
+  /*2. в 16-тиричном виде*/
+  background: #112233;
+  /*3. используя псевдофункции*/
+  background: rgb(128, 0, 255);
+  background: rgba(128,0,255,0.5);/*с прозрачностью*/
+  /*заливка картинкой*/
+  background: url('https://avatarko.ru/img/kartinka/1/Crazy_Frog.jpg')no-repeat;
+  background-size: 200px 300px;
+
+ }
+  /*создаем анимацию*/
+  @keyframes test {
+    0%{
+    height: 20px; 
+    width: 20px; 
+    }
+    10%{
+        height: 30px; 
+        width: 30px; 
+        }
+    40%{
+        right: 50px;
+        height: 50px; 
+        width: 50px; 
+            }
+    40%{
+        right: 50px;
+        height:70px; 
+        width:70px; 
+                    }   
+    60%{
+        background: red;
+    } 
+    80%{
+        border-radius: 30%;
+    }  
+    100%{
+        right: 0;
+        left: 10px;
+        border-radius: 0;
+    }                  
+
+
+
+
+  }
+  /*медиазапросы screen spech print all*/
+  @media all and (max-width:500px){
+    body{
+        background: blue;
+    }
+
+  }
+
+  @media screen and (max-width:1000px) and (max-width:800px){
+    body{
+        background: green;
+    }
+  }
+  @media print{
+    * {font-size: 68px;}
+  }
+
+ 
+
+
+
